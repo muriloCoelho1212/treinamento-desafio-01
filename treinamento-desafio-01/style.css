@@ -1,78 +1,174 @@
+/* global */
+
 *{
-    margin: 0;
     padding: 0;
     box-sizing: border-box;
+    margin: 0;
 }
 
 :root{
-    --background: #f2f0f0;
-    --cor-botao: #161b66;
+    --textColor: #f2f0f0;
+    --backgroundHeader: #161b66;
+    --backgroundColorModal: #424242;
+    --backgroundColor: #272727;
+    --textColorDark: #0e0e0e;
 }
+
+
+/* header */
+
+header{
+    background-color: var(--backgroundHeader);
+    color: var(--textColor);
+    padding: 16px;
+    border-bottom: 2px solid #000;
+    height: 10vh;
+    display: flex;
+    justify-content: center;
+}
+
+.titulo {
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+/* main */
 
 main{
-    width: 100vw;
-    height: 100vh;
-    border: 1px solid red;
     display: flex;
-    justify-content: center;
-    background-color: var(--background);
 }
 
-.principal{
-    width: 800px;
-    height: 400px;
-    border: 1px solid red;
-    padding: 16px;
+/* main left */
+
+.left {
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    border-right: 1px solid;
+    border-image: linear-gradient(#1a3689, #1344a0 ) 1;
+    width: 50vw;
+    height: 90vh;
+}
+
+.card-left{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px;
+}
+
+.card-descricao-sistema{
+    height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
+    align-items: center;
+    justify-content: space-around;
+}
+
+.titulo-sistema{
+    font-size: 4em;
 }
 
 .descricao-sistema{
-    display: flex;
-    flex-direction: column;
-    gap: 16px;
-    align-items: center;
-}
-
-#titulo-descricao-principal{
+    text-align: center;
     font-size: 2em;
 }
 
-#descricao-principal{
-    font-size: 1.2em;
+.botao-cadastrar{
+    background-color: var(--backgroundHeader);
+    padding: 32px;
+    font-size: 2em;
+    color: var(--textColor);
+    border-radius: 16px;
+    border: 2px solid #000;
 }
 
-#botao-principal{
-    padding: 20px;
-    border-radius: 12px;
-    font-size: 1.2em;
-    background-color: var(--cor-botao);
-    color: var(--background);
+/* main right */
+
+.right{
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    width: 50vw;
+    height: 90vh;
 }
 
-#link-principal{
-    cursor: pointer;
+.card-right{
+    height: 100%;
+    display: flex;
+    align-items: center;
+    flex-direction: column;
+    padding: 24px;
 }
 
-form{
+.card-historico-cadastros{
+    height: 50%;
     display: flex;
     flex-direction: column;
-    justify-content: center;
-    padding: 12px;
-    width: 60vw;
-    height: 40vh;
+    align-items: center;
+    justify-content: space-around;
 }
 
-input{
-    height: 24px;
+.titulo-historico-cadastros{
+    font-size: 4em;
 }
 
-table, th, td{
-    border: 1px solid black;
+/* tabela */
+
+.cabecalho-tabela{
+    padding: 24px;
+    text-align: center;
+    border: 1px solid #000;
+    background-color: var(--backgroundHeader);
 }
 
-td{
+.item-tabela{
+    padding: 24px;
+    text-align: center;
+    border: 1px solid #000;
+    background-color: var(--textColor);
+    color: var(--textColorDark);
+}
+
+tr:nth-child(even) {
+    background-color: #ce1616;
+  }
+
+/* modal de cadastro */
+
+.modal {
+    display: block; /* Hidden by default */
+    position: fixed; /* Stay in place */
+    top: 0;
+    width: 100%; /* Full width */
+    height: 100%; /* Full height */
+    background-color: #00000066; /* Black w/ opacity */
+ }
+
+ .modal-conteudo {
+    background-color: var(--backgroundHeader);
+    margin: 15% auto; /* 15% from the top and centered */
     padding: 20px;
-    font-size: 1.2rem;
-}
+    border: 1px solid;
+    border-image: linear-gradient(#1a3689, #1344a0 ) 1;
+    width: 80%; /* Could be more or less, depending on screen size */
+    display: flex; 
+    align-items: center;
+    justify-content: space-between;
+    color: var(--textColor);
+  }
+
+  .close-modal {
+    color: var(--textColor);
+    font-size: 28px;
+    font-weight: bold;
+  }
+  
+  .close-modal:hover,
+  .close-modal:focus {
+    color: var(--textColorDark);
+    text-decoration: none;
+    cursor: pointer;
+    display: flex;
+    transition: .5s;
+  }

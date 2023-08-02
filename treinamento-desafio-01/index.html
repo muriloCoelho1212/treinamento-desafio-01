@@ -7,18 +7,56 @@
     <title>Início</title>
 </head>
 <body>
+    <header>
+        <div class="titulo">
+            <h1 class="titulo-principal">Sistema de cadastro de pessoas</h1>
+        </div>
+    </header>
     <main>
-        <div class="principal">
-            <div class="descricao-sistema">
-                <h1 id="titulo-descricao-principal">Sistema de cadastro de pessoas</h1>
-                <p id="descricao-principal">O sistema permite a inserção de informações como nome completo, data de nascimento, endereço, contato (telefone e e-mail), gênero.</p>
-                <a href="./cadastro.html" target="_blank" id="link-principal">
-                    <button title="Cadastrar" id="botao-principal">
-                        <p>Fazer cadastro</p>
-                    </button>
-                </a>
+        <div class="left">
+            <div class="card-left">
+                <div class="card-descricao-sistema">
+                    <h2 class="titulo-sistema">Faça já seu cadastro</h2>
+                    <p class="descricao-sistema">
+                        Preencha os dados para se cadastrar em nossa plataforma. O sistema permite a inserção de informações como nome completo, data de nascimento, endereço, contato (telefone e e-mail), gênero.
+                    </p>
+                </div>
+                <button class="botao-cadastrar" id="botao-cadastrar" onclick="modalCadastro()">Cadastrar-se</button>
+            </div>
+        </div>
+        <div class="right">
+            <div class="card-right">
+                <div class="card-historico-cadastros">
+                    <h2 class="titulo-historico-cadastros">Cadastros realizados</h2>
+                    <table>
+                        <tr>
+                            <th class="cabecalho-tabela">Nome</th>
+                            <th class="cabecalho-tabela">Data de Nascimento</th>
+                            <th class="cabecalho-tabela">Sexo</th>
+                            <th class="cabecalho-tabela">Endereço</th >
+                            <th class="cabecalho-tabela">Celular</th>
+                            <th class="cabecalho-tabela">Email</th>
+                        </tr>
+                        <tr>
+                            <td class="item-tabela" id="nome"></td>
+                            <td class="item-tabela" id="dataNasc"></td>
+                            <td class="item-tabela" id="sexo"></td>
+                            <td class="item-tabela" id="endereco"></td>
+                            <td class="item-tabela" id="celular"></td>
+                            <td class="item-tabela" id="email"></td>
+                        </tr>
+                    </table>
+                </div>
             </div>
         </div>
     </main>
+
+    <div id="modal-cadastro" class="modal">
+        <div class="modal-conteudo">
+            <p>osdkcosajdkiosand</p>
+            <span id="close" class="close-modal">&times;</span>
+        </div>
+    </div>
+    <script src="./script.js"></script>
 </body>
 </html>
