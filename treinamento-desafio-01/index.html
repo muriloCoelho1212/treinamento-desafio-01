@@ -3,6 +3,9 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=REM:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
     <title>Início</title>
 </head>
@@ -37,14 +40,14 @@
                             <th class="cabecalho-tabela">Celular</th>
                             <th class="cabecalho-tabela">Email</th>
                         </tr>
-                        <tr>
+                        <!-- <tr>
                             <td class="item-tabela" id="nome"></td>
                             <td class="item-tabela" id="dataNasc"></td>
                             <td class="item-tabela" id="sexo"></td>
                             <td class="item-tabela" id="endereco"></td>
                             <td class="item-tabela" id="celular"></td>
                             <td class="item-tabela" id="email"></td>
-                        </tr>
+                        </tr> -->
                     </table>
                 </div>
             </div>
@@ -52,11 +55,48 @@
     </main>
 
     <div id="modal-cadastro" class="modal">
-        <div class="modal-conteudo">
-            <p>osdkcosajdkiosand</p>
-            <span id="close" class="close-modal">&times;</span>
+        <div class="alinha-modal-conteudo">
+            <div class="modal-conteudo">
+                <form action="" class="form-cadastro">
+                    <div class="campo-cadastro">
+                        <label for="">Nome:</label>
+                        <input type="text" class="input-cadastro" id="nome-cadastro">
+                    </div>
+                    <div class="campo-cadastro">
+                        <label for="">Data de Nascimento:</label>
+                        <input type="date" class="input-cadastro" id="data-cadastro">
+                    </div>
+                    <div class="campo-cadastro">
+                        <label for="">Sexo:</label>
+                        <input type="radio" class="input-cadastro" id="sexo-masc">Masculino
+                        <input type="radio" class="input-cadastro" id="sexo-fem">Feminino
+                    </div>
+                    <div class="campo-cadastro">
+                        <label for="">Endereço:</label>
+                        <input type="text" class="input-cadastro" id="endereco-cadastro">
+                    </div>
+                    <div class="campo-cadastro">
+                        <label for="">Celular:</label>
+                        <input type="tel" class="input-cadastro" id="telefone-cadastro">
+                    </div>
+                    <div class="campo-cadastro">
+                        <label for="">Email:</label>
+                        <input type="email" class="input-cadastro" id="email-cadastro">
+                    </div>
+                    <div class="campo-botoes">
+                        <div class="campo-botao">
+                            <button class="botao-cadastro-modal" onclick="cadastrar()">Enviar</button>
+                        </div>
+                        <div class="campo-botao">
+                            <button id="fechar" class="botao-fechar-modal">
+                                Fechar
+                            </button>
+                        </div>
+                    </div>
+                </form>
+            </div>
         </div>
     </div>
-    <script src="./script.js"></script>
+    <script src="script.js" defer></script>
 </body>
 </html>

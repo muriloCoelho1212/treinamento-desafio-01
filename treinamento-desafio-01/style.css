@@ -4,12 +4,13 @@
     padding: 0;
     box-sizing: border-box;
     margin: 0;
+    font-family: 'REM', sans-serif;
 }
 
 :root{
     --textColor: #f2f0f0;
     --backgroundHeader: #161b66;
-    --backgroundColorModal: #424242;
+    --backgroundColorInput: #424242;
     --backgroundColor: #272727;
     --textColorDark: #0e0e0e;
 }
@@ -73,6 +74,7 @@ main{
 .descricao-sistema{
     text-align: center;
     font-size: 2em;
+    line-height: 1.5    ;
 }
 
 .botao-cadastrar{
@@ -137,38 +139,84 @@ tr:nth-child(even) {
 /* modal de cadastro */
 
 .modal {
-    display: block; /* Hidden by default */
-    position: fixed; /* Stay in place */
+    display: none;
+    position: fixed;
     top: 0;
-    width: 100%; /* Full width */
-    height: 100%; /* Full height */
-    background-color: #00000066; /* Black w/ opacity */
+    width: 100%;
+    height: 100%;
+    background-color: #00000066;
+    font-size: 32px;
+ }
+
+ .alinha-modal-conteudo{
+    width: 100%;
+    height: 100%;
+    display: flex;
+    align-items: center;
+    justify-content: center;
  }
 
  .modal-conteudo {
     background-color: var(--backgroundHeader);
-    margin: 15% auto; /* 15% from the top and centered */
-    padding: 20px;
-    border: 1px solid;
-    border-image: linear-gradient(#1a3689, #1344a0 ) 1;
-    width: 80%; /* Could be more or less, depending on screen size */
-    display: flex; 
-    align-items: center;
+    border: 1px solid #000;
+    padding: 24px;
+    border-radius: 16px;
+    display: flex;
+    align-items: end;
     justify-content: space-between;
+    gap: 16px;
     color: var(--textColor);
   }
 
-  .close-modal {
-    color: var(--textColor);
-    font-size: 28px;
-    font-weight: bold;
-  }
-  
-  .close-modal:hover,
-  .close-modal:focus {
-    color: var(--textColorDark);
-    text-decoration: none;
-    cursor: pointer;
+  /* form de cadastro */
+
+  .form-cadastro{
     display: flex;
-    transition: .5s;
+    flex-direction: column;
+    gap: 16px;
   }
+
+  .campo-cadastro{
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 16px;
+  }
+
+  .input-cadastro{
+    border: 2px solid var(--backgroundColor);
+    background-color: var(--textColor);
+    border-radius: 16px;
+    font-size: 28px;
+    padding: 8px;
+    outline: none;
+  }
+
+  .input-cadastro:focus{
+    border: 2px solid var(--textColor);
+  }
+
+  .campo-botoes{
+    display: flex;
+    gap: 16px;
+    justify-content: center;
+  }
+
+  .botao-cadastro-modal, .botao-fechar-modal{
+    font-size: 24px;
+    padding: 16px;
+    border-radius: 16px;
+    background-color: var(--backgroundColor);
+    color: var(--textColor);
+    border: none;
+  }
+
+  .botao-cadastro-modal:focus, .botao-fechar-modal:focus{
+    border: 2px solid #1a3689;
+    outline: 0;
+  }
+
+.botao-cadastro-modal:hover, .botao-fechar-modal:hover{
+    background-color: var(--backgroundColorInput);
+    transition: .5s;
+}

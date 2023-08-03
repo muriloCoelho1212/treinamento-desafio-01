@@ -1,15 +1,26 @@
 function modalCadastro(){
     let modal = document.getElementById('modal-cadastro')
-    let span = document.getElementById('close')
+    let fecharModal = document.getElementById('fechar')
     
-    modal.style.display = "block"
+    modal.style.display = 'block'
     
-    span.onclick = function(){
-        modal.style.display = "none"
+    fecharModal.onclick = function(){
+        modal.style.display = 'none'
     }
-    // window.onclick = function(event) {
-    //     if(event.target == modal){
-    //         modal.style.display = "none"
-    //     }
-    // }
+
+    window.onclick = function(event){
+        if(event.target == modal){
+            modal.style.display = 'none'
+        }
+    }
+}
+
+function cadastrar(){
+    let nome = document.getElementById('nome-cadastro')
+    let dataNasc = document.getElementById('data-cadastro')
+    dataNasc = new Date().toLocaleDateString()
+
+
+    console.log(nome)
+    console.log(dataNasc)
 }
