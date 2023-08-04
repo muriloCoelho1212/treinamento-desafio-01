@@ -24,7 +24,7 @@
                         Preencha os dados para se cadastrar em nossa plataforma. O sistema permite a inserção de informações como nome completo, data de nascimento, endereço, contato (telefone e e-mail), gênero.
                     </p>
                 </div>
-                <button class="botao-cadastrar" id="botao-cadastrar" onclick="modalCadastro()">Cadastrar-se</button>
+                <button class="botao-cadastrar" id="botao-cadastrar" onclick="abrirModal()">Cadastrar-se</button>
             </div>
         </div>
         <div class="right">
@@ -68,15 +68,15 @@
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Sexo:</label>
-                        <input type="radio" class="input-cadastro" id="sexo-masc">Masculino
-                        <input type="radio" class="input-cadastro" id="sexo-fem">Feminino
+                        <input type="radio" class="input-cadastro" value="Masculino">Masculino
+                        <input type="radio" class="input-cadastro" value="Feminino">Feminino
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Endereço:</label>
                         <input type="text" class="input-cadastro" id="endereco-cadastro">
                     </div>
                     <div class="campo-cadastro">
-                        <label for="">Celular:</label>
+                        <label for="">Telefone:</label>
                         <input type="tel" class="input-cadastro" id="telefone-cadastro">
                     </div>
                     <div class="campo-cadastro">
@@ -85,7 +85,7 @@
                     </div>
                     <div class="campo-botoes">
                         <div class="campo-botao">
-                            <button class="botao-cadastro-modal" onclick="cadastrar()">Enviar</button>
+                            <button class="botao-cadastro-modal" onclick="criarCadastro()">Enviar</button>
                         </div>
                         <div class="campo-botao">
                             <button id="fechar" class="botao-fechar-modal">
