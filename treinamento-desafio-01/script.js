@@ -24,7 +24,6 @@ btnCadastrar.addEventListener('click', () => {
 })
 
 function criarCadastro(){
-
     let nome = document.querySelector('#nome-cadastro')
 
     let data = new Date(document.querySelector('#data-cadastro').value)
@@ -36,32 +35,12 @@ function criarCadastro(){
     let email = document.querySelector('#email-cadastro')
 
     closeModal()
-    mostraCadastro(nome.value, formatData, sexo.value, endereco.value, tel.value, email.value)
+    criaLinha(nome.value, formatData, sexo.value, endereco.value, tel.value, email.value)
 }
 
 // Função mostrar cadastro
 
-function mostraCadastro(nome, formatData, sexo, endereco, tel, email){
-
-    let nomeTabela = document.querySelector('#nomeTabela')
-    let dataTabela = document.querySelector('#dataTabela')
-    let sexoTabela = document.querySelector('#sexoTabela')
-    let enderecoTabela = document.querySelector('#enderecoTabela')
-    let telTabela = document.querySelector('#celularTabela')
-    let emailTabela = document.querySelector('#emailTabela')
-    
-    nomeTabela.innerText = nome
-    dataTabela.innerText = formatData
-    sexoTabela.innerText = sexo
-    enderecoTabela.innerText = endereco
-    telTabela.innerText = tel
-    emailTabela.innerText = email
-
-    criaLinha(nome, formatData, sexo, endereco, tel, email)
-}
-
 function criaLinha(nome, formatData, sexo, endereco, tel, email){
-    let numLinha = tabela.rows.length
     let novaLinha = tabela.insertRow(1)
     novaLinha.insertCell(0).innerText = nome
     novaLinha.insertCell(1).innerText = formatData
@@ -69,5 +48,4 @@ function criaLinha(nome, formatData, sexo, endereco, tel, email){
     novaLinha.insertCell(3).innerText = endereco
     novaLinha.insertCell(4).innerText = tel
     novaLinha.insertCell(5).innerText = email
-    console.log(numLinha)
 }
