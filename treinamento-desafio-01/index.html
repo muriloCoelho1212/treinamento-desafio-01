@@ -24,7 +24,7 @@
                         Preencha os dados para se cadastrar em nossa plataforma. O sistema permite a inserção de informações como nome completo, data de nascimento, endereço, contato (telefone e e-mail), gênero.
                     </p>
                 </div>
-                <button class="botao-cadastrar" id="botao-cadastrar" onclick="abrirModal()">Cadastrar-se</button>
+                <button class="botao-cadastrar" id="botao-abrir-modal">Cadastrar-se</button>
             </div>
         </div>
         <div class="right">
@@ -40,14 +40,14 @@
                             <th class="cabecalho-tabela">Celular</th>
                             <th class="cabecalho-tabela">Email</th>
                         </tr>
-                        <!-- <tr>
-                            <td class="item-tabela" id="nome"></td>
-                            <td class="item-tabela" id="dataNasc"></td>
-                            <td class="item-tabela" id="sexo"></td>
-                            <td class="item-tabela" id="endereco"></td>
-                            <td class="item-tabela" id="celular"></td>
-                            <td class="item-tabela" id="email"></td>
-                        </tr> -->
+                        <tr>
+                            <td class="item-tabela" id="nomeTabela"></td>
+                            <td class="item-tabela" id="dataTabela"></td>
+                            <td class="item-tabela" id="sexoTabela"></td>
+                            <td class="item-tabela" id="enderecoTabela"></td>
+                            <td class="item-tabela" id="celularTabela"></td>
+                            <td class="item-tabela" id="emailTabela"></td>
+                        </tr>
                     </table>
                 </div>
             </div>
@@ -57,7 +57,7 @@
     <div id="modal-cadastro" class="modal">
         <div class="alinha-modal-conteudo">
             <div class="modal-conteudo">
-                <form action="" class="form-cadastro">
+                <div class="form-cadastro">
                     <div class="campo-cadastro">
                         <label for="">Nome:</label>
                         <input type="text" class="input-cadastro" id="nome-cadastro">
@@ -68,8 +68,8 @@
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Sexo:</label>
-                        <input type="radio" class="input-cadastro" value="Masculino">Masculino
-                        <input type="radio" class="input-cadastro" value="Feminino">Feminino
+                        <input type="radio" class="input-cadastro" value="Masculino" id="sexo-cadastro">Masculino
+                        <input type="radio" class="input-cadastro" value="Feminino" id="sexo-cadastro">Feminino
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Endereço:</label>
@@ -77,7 +77,7 @@
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Telefone:</label>
-                        <input type="tel" class="input-cadastro" id="telefone-cadastro">
+                        <input type="tel" class="input-cadastro" id="tel-cadastro">
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Email:</label>
@@ -85,15 +85,15 @@
                     </div>
                     <div class="campo-botoes">
                         <div class="campo-botao">
-                            <button class="botao-cadastro-modal" onclick="criarCadastro()">Enviar</button>
+                            <button class="botao-cadastro-modal" id="botao-modal-cadastrar">Enviar</button>
                         </div>
                         <div class="campo-botao">
-                            <button id="fechar" class="botao-fechar-modal">
+                            <button id="botao-fechar-modal" class="botao-fechar-modal">
                                 Fechar
                             </button>
                         </div>
                     </div>
-                </form>
+                </div>
             </div>
         </div>
     </div>

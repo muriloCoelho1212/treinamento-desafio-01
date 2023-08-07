@@ -1,25 +1,44 @@
-function abrirModal(){
-    let modal = document.getElementById('modal-cadastro')
+// Abrir e fechar modal
+
+const modal = document.querySelector('#modal-cadastro')
+const btnAbrirModal = document.querySelector('#botao-abrir-modal')
+const btnFecharModal = document.querySelector('#botao-fechar-modal')
+
+btnAbrirModal.addEventListener('click', () => {
     modal.style.display = "block"
-}
+})
+
+btnFecharModal.addEventListener('click', () => {
+    modal.style.display = "none"
+})
+
+// Função criar cadastro
+
+const btnCadastrar = document.querySelector('#botao-modal-cadastrar')
+
+btnCadastrar.addEventListener('click', () => {
+    criarCadastro()
+})
 
 function criarCadastro(){
-    let nome = document.querySelector('#nome-cadastro').value
+    let nome = document.querySelector('#nome-cadastro')
+    let data = document.querySelector('#data-cadastro')
+    let sexo = document.querySelector('#sexo-cadastro')
+    let endereco = document.querySelector('#endereco-cadastro')
+    let tel = document.querySelector('#tel-cadastro')
+    let email = document.querySelector('#email-cadastro')
 
-    let data = document.querySelector('#data-cadastro').value
-    let dataNasc = new Date(dataNasc)
-    let dataNascFormatada = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
+    let nomeTabela = document.querySelector('#nomeTabela')
+    let dataTabela = document.querySelector('#dataTabela')
+    let sexoTabela = document.querySelector('#sexoTabela')
+    let enderecoTabela = document.querySelector('#enderecoTabela')
+    let telTabela = document.querySelector('#celularTabela')
+    let emailTabela = document.querySelector('#emailTabela')
 
-    let sexo = document.querySelector('.input-cadastro:checked').value
-    let endereco = document.querySelector('#endereco-cadastro').value
-    let tel = document.querySelector('#telefone-cadastro').value
-    let email = document.querySelector('#email-cadastro').value
-
-
-    console.log(nome)
-    console.log(dataNascFormatada)
-    console.log(sexo)
-    console.log(endereco)
-    console.log(tel)
-    console.log(email)
+    nomeTabela.innerText = nome.value
+    dataTabela.innerText = data.value
+    sexoTabela.innerText = sexo.value
+    enderecoTabela.innerText = endereco.value
+    telTabela.innerText = tel.value
+    emailTabela.innerText = email.value
 }
