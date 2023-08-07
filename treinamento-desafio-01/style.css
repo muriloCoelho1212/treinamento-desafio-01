@@ -117,14 +117,14 @@ main{
 
 /* tabela */
 
-.cabecalho-tabela{
+th{
     padding: 24px;
     text-align: center;
     border: 1px solid #000;
     background-color: var(--backgroundHeader);
 }
 
-.item-tabela{
+td{
     padding: 24px;
     text-align: center;
     border: 1px solid #000;
