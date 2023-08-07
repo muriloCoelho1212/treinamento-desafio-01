@@ -28,14 +28,14 @@ function criarCadastro(){
 
     let data = new Date(document.querySelector('#data-cadastro').value)
     let formatData = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
-
-    let sexo = document.querySelector('#sexo-cadastro')
+    let sexo = document.querySelector('input[name=sexo]:checked').value
     let endereco = document.querySelector('#endereco-cadastro')
     let tel = document.querySelector('#tel-cadastro')
     let email = document.querySelector('#email-cadastro')
 
     closeModal()
-    criaLinha(nome.value, formatData, sexo.value, endereco.value, tel.value, email.value)
+    criaLinha(nome.value, formatData, sexo, endereco.value, tel.value, email.value)
+
 }
 
 // Função mostrar cadastro
