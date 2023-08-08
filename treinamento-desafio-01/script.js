@@ -4,6 +4,7 @@ const modal = document.querySelector('#modal-cadastro')
 const btnAbrirModal = document.querySelector('#botao-abrir-modal')
 const btnFecharModal = document.querySelector('#botao-fechar-modal')
 const tabela = document.querySelector("table")
+const form = document.querySelector('#form-cadastro')
 
 btnAbrirModal.addEventListener('click', () => {
     modal.style.display = "block"
@@ -11,7 +12,9 @@ btnAbrirModal.addEventListener('click', () => {
 
 btnFecharModal.addEventListener('click', closeModal)
 
-function closeModal(){
+function closeModal(evento){
+    evento.preventDefault()
+
     modal.style.display = "none"
 }
 
@@ -19,23 +22,25 @@ function closeModal(){
 
 const btnCadastrar = document.querySelector('#botao-modal-cadastrar')
 
-btnCadastrar.addEventListener('click', () => {
+form.addEventListener('submit', (evento) => {
+    evento.preventDefault()
+
     criarCadastro()
 })
 
 function criarCadastro(){
     let nome = document.querySelector('#nome-cadastro')
-
     let data = new Date(document.querySelector('#data-cadastro').value)
-    let formatData = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
-    let sexo = document.querySelector('input[name=sexo]:checked').value
+    let sexo = document.querySelector('input[name=sexo]:checked')
     let endereco = document.querySelector('#endereco-cadastro')
     let tel = document.querySelector('#tel-cadastro')
     let email = document.querySelector('#email-cadastro')
+    
+    data = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
 
-    closeModal()
-    criaLinha(nome.value, formatData, sexo, endereco.value, tel.value, email.value)
-
+    criaLinha(nome.value, data, sexo.value, endereco.value, tel.value, email.value)
+    form.reset()
+    console.log(nome)
 }
 
 // Função mostrar cadastro

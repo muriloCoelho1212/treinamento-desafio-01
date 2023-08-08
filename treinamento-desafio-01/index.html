@@ -57,31 +57,31 @@
     <div id="modal-cadastro" class="modal">
         <div class="alinha-modal-conteudo">
             <div class="modal-conteudo">
-                <div class="form-cadastro">
+                <form class="form-cadastro" id="form-cadastro">
                     <div class="campo-cadastro">
                         <label for="">Nome:</label>
-                        <input type="text" class="input-cadastro" id="nome-cadastro" placeholder="oicodiodiof">
+                        <input type="text" class="input-cadastro" id="nome-cadastro" placeholder="Murilo..." data-input>
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Data de Nascimento:</label>
-                        <input type="date" class="input-cadastro" id="data-cadastro" placeholder="dd/mm/aaaa">
+                        <input type="date" class="input-cadastro" id="data-cadastro" placeholder="dd/mm/aaaa" data-input>
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Sexo:</label>
-                        <input type="radio" class="input-cadastro" value="Masculino" id="sexo-cadastro-masc" name="sexo" required>Masculino
-                        <input type="radio" class="input-cadastro" value="Feminino" id="sexo-cadastro-fem" name="sexo">Feminino
+                        <input type="radio" class="input-cadastro" value="Masculino" id="sexo-cadastro-masc" name="sexo" required data-input>Masculino
+                        <input type="radio" class="input-cadastro" value="Feminino" id="sexo-cadastro-fem" name="sexo" data-input>Feminino
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Endereço:</label>
-                        <input type="text" class="input-cadastro" id="endereco-cadastro" placeholder="Rua das Flores">
+                        <input type="text" class="input-cadastro" id="endereco-cadastro" placeholder="Rua das Flores" data-input>
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Telefone:</label>
-                        <input type="tel" class="input-cadastro" id="tel-cadastro" placeholder="(15) 99999-8888">
+                        <input type="tel" class="input-cadastro" id="tel-cadastro" placeholder="(15) 99999-8888" data-input>
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Email:</label>
-                        <input type="email" class="input-cadastro" id="email-cadastro" placeholder="aaaaa@gmail.com">
+                        <input type="email" class="input-cadastro" id="email-cadastro" placeholder="aaaaa@gmail.com" data-input>
                     </div>
                     <div class="campo-botoes">
                         <div class="campo-botao">
@@ -93,7 +93,7 @@
                             </button>
                         </div>
                     </div>
-                </div>
+                </form>
             </div>
         </div>
     </div>
