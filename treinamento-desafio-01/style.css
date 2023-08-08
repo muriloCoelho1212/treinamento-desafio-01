@@ -117,6 +117,10 @@ main{
 
 /* tabela */
 
+table{
+    width: 100%;
+}
+
 th{
     padding: 24px;
     text-align: center;
@@ -124,16 +128,19 @@ th{
     background-color: var(--backgroundHeader);
 }
 
+tr{
+    background-color: var(--textColor);
+}
+
 td{
     padding: 24px;
     text-align: center;
     border: 1px solid #000;
-    background-color: var(--textColor);
     color: var(--textColorDark);
 }
 
-tr:nth-child(even) {
-    background-color: #ce1616;
+tr:nth-child(odd) {
+    background-color: #e2e2e291;
   }
 
 /* modal de cadastro */
