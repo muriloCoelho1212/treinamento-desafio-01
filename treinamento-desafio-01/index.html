@@ -60,28 +60,28 @@
                 <form class="form-cadastro" id="form-cadastro">
                     <div class="campo-cadastro">
                         <label for="">Nome:</label>
-                        <input type="text" class="input-cadastro" id="nome-cadastro" placeholder="Murilo..." data-input>
+                        <input type="text" class="input-cadastro" id="nome-cadastro" placeholder="Murilo" data-input required minlength="3" maxlength="100">
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Data de Nascimento:</label>
-                        <input type="date" class="input-cadastro" id="data-cadastro" placeholder="dd/mm/aaaa" data-input>
+                        <input type="date" class="input-cadastro" id="data-cadastro" placeholder="dd/mm/aaaa" data-input required>
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Sexo:</label>
                         <input type="radio" class="input-cadastro" value="Masculino" id="sexo-cadastro-masc" name="sexo" required data-input>Masculino
                         <input type="radio" class="input-cadastro" value="Feminino" id="sexo-cadastro-fem" name="sexo" data-input>Feminino
-                    </div>
+                    </div> 
                     <div class="campo-cadastro">
                         <label for="">Endereço:</label>
-                        <input type="text" class="input-cadastro" id="endereco-cadastro" placeholder="Rua das Flores" data-input>
+                        <input type="text" class="input-cadastro" id="endereco-cadastro" placeholder="Rua das Flores" data-input required maxlength="150">
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Telefone:</label>
-                        <input type="tel" class="input-cadastro" id="tel-cadastro" placeholder="(15) 99999-8888" data-input>
+                        <input type="text" class="input-cadastro" id="tel-cadastro" placeholder="99 99999-8888" data-input required minlength="13" maxlength="15" pattern="\d{2}\s\d{5}-\d{4}">
                     </div>
                     <div class="campo-cadastro">
                         <label for="">Email:</label>
-                        <input type="email" class="input-cadastro" id="email-cadastro" placeholder="aaaaa@gmail.com" data-input>
+                        <input type="email" class="input-cadastro" id="email-cadastro" placeholder="aaaaa@gmail.com" data-input required minlength="4" maxlength="60">
                     </div>
                     <div class="campo-botoes">
                         <div class="campo-botao">

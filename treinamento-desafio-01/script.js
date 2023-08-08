@@ -40,15 +40,14 @@ function criarCadastro(){
 
     criaLinha(nome.value, data, sexo.value, endereco.value, tel.value, email.value)
     form.reset()
-    console.log(nome)
 }
 
 // Função mostrar cadastro
 
-function criaLinha(nome, formatData, sexo, endereco, tel, email){
+function criaLinha(nome, data, sexo, endereco, tel, email){
     let novaLinha = tabela.insertRow(1)
     novaLinha.insertCell(0).innerText = nome
-    novaLinha.insertCell(1).innerText = formatData
+    novaLinha.insertCell(1).innerText = data
     novaLinha.insertCell(2).innerText = sexo
     novaLinha.insertCell(3).innerText = endereco
     novaLinha.insertCell(4).innerText = tel
