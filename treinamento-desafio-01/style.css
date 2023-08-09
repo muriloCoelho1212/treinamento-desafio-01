@@ -20,6 +20,7 @@
 
 body{
     background-color: var(--cinza-escuro);
+    min-height: 100vh;
 }
 
 /* header */
@@ -43,6 +44,7 @@ header{
 /* main */
 
 main{
+    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
@@ -54,7 +56,7 @@ main{
 
 .cadastro {
     color: var(--branco);
-    height: 50vh;
+    height: 40vh;
     background-color: var(--cinza-claro);
     width: 100%;
 }
@@ -152,7 +154,7 @@ tr:nth-child(odd) {
     position: fixed;
     top: 0;
     height: 100%;
-    width: 80%;
+    width: 100%;
     background-color: var(--preto-transparente);
     font-size: 32px;
  }
@@ -228,4 +230,19 @@ tr:nth-child(odd) {
 .botao-cadastro-modal:hover, .botao-fechar-modal:hover{
     background-color: var(--cinza-claro);
     transition: .5s;
+}
+
+/* Footer */
+
+footer{
+    background-color: var(--roxo);
+    width: 100%;
+    padding: 1.5em;
+    text-align: center;
+}
+
+.footer-ancora{
+    color: var(--branco);
+    text-decoration: none;
+    font-size: 1.5em;
 }
