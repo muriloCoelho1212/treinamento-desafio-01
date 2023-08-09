@@ -21,6 +21,8 @@
 body{
     background-color: var(--cinza-escuro);
     min-height: 100vh;
+    display: flex;
+    flex-direction: column;
 }
 
 /* header */
@@ -44,11 +46,11 @@ header{
 /* main */
 
 main{
-    position: relative;
     display: flex;
     flex-direction: column;
     justify-content: center;
     align-items: center;
+    flex-grow: 1;
 }
 
 /* main cadastro */
