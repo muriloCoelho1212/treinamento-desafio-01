@@ -1,11 +1,5 @@
 /* global */
 
-*{
-    padding: 0;
-    box-sizing: border-box;
-    margin: 0;
-    font-family: 'REM', sans-serif;
-}
 
 :root{
     --branco: #f2f0f0;
@@ -17,13 +11,23 @@
     --azul: #1a3689;
 }
 
+*{
+    padding: 0;
+    box-sizing: border-box;
+    margin: 0;
+    font-family: 'REM', sans-serif;
+}
+
+body{
+    background-color: var(--cinza-escuro);
+}
 
 /* header */
 
 header{
     background-color: var(--roxo);
     color: var(--branco);
-    padding: 16px;
+    padding: 2em;
     border-bottom: 2px solid var(--preto);
     height: 10vh;
     display: flex;
@@ -36,37 +40,38 @@ header{
     justify-content: center;
 }
 
-/* main */
-
-main{
-    display: flex;
-}
 
 /* main left */
 
+main{
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
 .left {
-    background-color: var(--cinza-escuro);
     color: var(--branco);
-    border-right: 1px solid;
-    border-image: linear-gradient(#1a3689, #1344a0 ) 1;
-    width: 50vw;
-    height: 90vh;
+    height: 50vh;
+    background-color: var(--cinza-claro);
 }
 
 .card-left{
-    height: 100%;
     display: flex;
     align-items: center;
+    justify-content: center;
     flex-direction: column;
-    padding: 24px;
+    padding: 1.5em;
+    height: 100%;
+    border-bottom: 2px solid;
+    border-image: linear-gradient(#1a3689, #1344a0 ) 1;
 }
 
 .card-descricao-sistema{
-    height: 50%;
     display: flex;
     flex-direction: column;
     align-items: center;
-    justify-content: space-around;
+    gap: 1.5em;
 }
 
 .titulo-sistema{
@@ -81,7 +86,7 @@ main{
 
 .botao-cadastrar{
     background-color: var(--roxo);
-    padding: 32px;
+    padding: 2rem;
     font-size: 2em;
     color: var(--branco);
     border-radius: 16px;
@@ -98,24 +103,15 @@ main{
 .right{
     background-color: var(--cinza-escuro);
     color: var(--branco);
-    width: 50vw;
-    height: 90vh;
+    margin: 2em;
+    width: 80%;
 }
 
 .card-right{
-    height: 100%;
-    display: flex;
-    align-items: center;
-    flex-direction: column;
-    padding: 24px;
-}
-
-.card-historico-cadastros{
-    height: 50%;
+    text-align: center;
     display: flex;
     flex-direction: column;
-    align-items: center;
-    justify-content: space-around;
+    gap: 2em;
 }
 
 .titulo-historico-cadastros{
@@ -123,10 +119,6 @@ main{
 }
 
 /* tabela */
-
-table{
-    width: 100%;
-}
 
 th{
     padding: 24px;

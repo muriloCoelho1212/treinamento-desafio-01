@@ -7,7 +7,7 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=REM:wght@400;700&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="style.css">
-    <title>Início</title>
+    <title>Tela de cadastro</title>
 </head>
 <body>
     <header>
@@ -16,79 +16,77 @@
         </div>
     </header>
     <main>
-        <div class="left">
+        <section class="left">
             <div class="card-left">
                 <div class="card-descricao-sistema">
                     <h2 class="titulo-sistema">Faça já seu cadastro</h2>
                     <p class="descricao-sistema">
                         Preencha os dados para se cadastrar em nossa plataforma. O sistema permite a inserção de informações como nome completo, data de nascimento, endereço, contato (telefone e e-mail), gênero.
                     </p>
+                    <button class="botao-cadastrar" id="botao-abrir-modal">Cadastrar-se</button>
                 </div>
-                <button class="botao-cadastrar" id="botao-abrir-modal">Cadastrar-se</button>
             </div>
-        </div>
-        <div class="right">
+        </section>
+        <section class="right">
             <div class="card-right">
-                <div class="card-historico-cadastros">
-                    <h2 class="titulo-historico-cadastros">Cadastros realizados</h2>
-                    <table>
-                        <tr>
-                            <th>Nome</th>
-                            <th>Data de Nascimento</th>
-                            <th>Sexo</th>
-                            <th>Endereço</th >
-                            <th>Celular</th>
-                            <th>Email</th>
-                        </tr>
-                    </table>
+                <h2 class="titulo-historico-cadastros">Cadastros realizados</h2>
+                <table>
+                    <tr>
+                        <th>Nome</th>
+                        <th>Data de Nascimento</th>
+                        <th>Sexo</th>
+                        <th>Endereço</th >
+                        <th>Celular</th>
+                        <th>Email</th>
+                    </tr>
+                </table>
+            </div>
+            <div id="modal-cadastro" class="modal">
+                <div class="alinha-modal-conteudo">
+                    <div class="modal-conteudo">
+                        <form class="form-cadastro" id="form-cadastro">
+                            <div class="campo-cadastro">
+                                <label for="">Nome:</label>
+                                <input type="text" class="input-cadastro" id="nome-cadastro" placeholder="Murilo" data-input required minlength="3" maxlength="100">
+                            </div>
+                            <div class="campo-cadastro">
+                                <label for="">Data de Nascimento:</label>
+                                <input type="date" class="input-cadastro" id="data-cadastro" placeholder="dd/mm/aaaa" data-input required>
+                            </div>
+                            <div class="campo-cadastro">
+                                <label for="">Sexo:</label>
+                                <input type="radio" class="input-cadastro" value="Masculino" id="sexo-cadastro-masc" name="sexo" required data-input>Masculino
+                                <input type="radio" class="input-cadastro" value="Feminino" id="sexo-cadastro-fem" name="sexo" data-input>Feminino
+                            </div> 
+                            <div class="campo-cadastro">
+                                <label for="">Endereço:</label>
+                                <input type="text" class="input-cadastro" id="endereco-cadastro" placeholder="Rua das Flores" data-input required maxlength="150">
+                            </div>
+                            <div class="campo-cadastro">
+                                <label for="">Telefone:</label>
+                                <input type="text" class="input-cadastro" id="tel-cadastro" placeholder="99 99999-8888" data-input required minlength="13" maxlength="15" pattern="\d{2}\s\d{5}-\d{4}">
+                            </div>
+                            <div class="campo-cadastro">
+                                <label for="">Email:</label>
+                                <input type="email" class="input-cadastro" id="email-cadastro" placeholder="aaaaa@gmail.com" data-input required minlength="4" maxlength="60">
+                            </div>
+                            <div class="campo-botoes">
+                                <div class="campo-botao">
+                                    <button class="botao-cadastro-modal" id="botao-modal-cadastrar">Enviar</button>
+                                </div>
+                                <div class="campo-botao">
+                                    <button id="botao-fechar-modal" class="botao-fechar-modal">
+                                        Fechar
+                                    </button>
+                                </div>
+                            </div>
+                        </form>
+                    </div>
                 </div>
             </div>
-        </div>
+        </section>
     </main>
 
-    <div id="modal-cadastro" class="modal">
-        <div class="alinha-modal-conteudo">
-            <div class="modal-conteudo">
-                <form class="form-cadastro" id="form-cadastro">
-                    <div class="campo-cadastro">
-                        <label for="">Nome:</label>
-                        <input type="text" class="input-cadastro" id="nome-cadastro" placeholder="Murilo" data-input required minlength="3" maxlength="100">
-                    </div>
-                    <div class="campo-cadastro">
-                        <label for="">Data de Nascimento:</label>
-                        <input type="date" class="input-cadastro" id="data-cadastro" placeholder="dd/mm/aaaa" data-input required>
-                    </div>
-                    <div class="campo-cadastro">
-                        <label for="">Sexo:</label>
-                        <input type="radio" class="input-cadastro" value="Masculino" id="sexo-cadastro-masc" name="sexo" required data-input>Masculino
-                        <input type="radio" class="input-cadastro" value="Feminino" id="sexo-cadastro-fem" name="sexo" data-input>Feminino
-                    </div> 
-                    <div class="campo-cadastro">
-                        <label for="">Endereço:</label>
-                        <input type="text" class="input-cadastro" id="endereco-cadastro" placeholder="Rua das Flores" data-input required maxlength="150">
-                    </div>
-                    <div class="campo-cadastro">
-                        <label for="">Telefone:</label>
-                        <input type="text" class="input-cadastro" id="tel-cadastro" placeholder="99 99999-8888" data-input required minlength="13" maxlength="15" pattern="\d{2}\s\d{5}-\d{4}">
-                    </div>
-                    <div class="campo-cadastro">
-                        <label for="">Email:</label>
-                        <input type="email" class="input-cadastro" id="email-cadastro" placeholder="aaaaa@gmail.com" data-input required minlength="4" maxlength="60">
-                    </div>
-                    <div class="campo-botoes">
-                        <div class="campo-botao">
-                            <button class="botao-cadastro-modal" id="botao-modal-cadastrar">Enviar</button>
-                        </div>
-                        <div class="campo-botao">
-                            <button id="botao-fechar-modal" class="botao-fechar-modal">
-                                Fechar
-                            </button>
-                        </div>
-                    </div>
-                </form>
-            </div>
-        </div>
-    </div>
     <script src="script.js" defer></script>
 </body>
 </html>
