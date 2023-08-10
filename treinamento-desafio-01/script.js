@@ -1,5 +1,3 @@
-// Abrir e fechar modal
-
 const modal = document.querySelector('#modal-cadastro')
 const btnAbrirModal = document.querySelector('#botao-abrir-modal')
 const btnFecharModal = document.querySelector('#botao-fechar-modal')
@@ -17,8 +15,6 @@ function closeModal(evento){
 
     modal.style.display = "none"
 }
-
-// Função criar cadastro
 
 const btnCadastrar = document.querySelector('#botao-modal-cadastrar')
 
@@ -42,8 +38,6 @@ function criarCadastro(){
     form.reset()
 }
 
-// Função mostrar cadastro
-
 function criaLinha(nome, data, sexo, endereco, tel, email){
     let novaLinha = tabela.insertRow(1)
     novaLinha.insertCell(0).innerText = nome
@@ -52,4 +46,7 @@ function criaLinha(nome, data, sexo, endereco, tel, email){
     novaLinha.insertCell(3).innerText = endereco
     novaLinha.insertCell(4).innerText = tel
     novaLinha.insertCell(5).innerText = email
+}
+
+function validarEmail(email){
 }
