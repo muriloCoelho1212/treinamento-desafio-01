@@ -39,7 +39,7 @@ function criarCadastro(){
 }
 
 function criaLinha(nome, data, sexo, endereco, tel, email){
-    let novaLinha = tabela.insertRow(1)
+    const novaLinha = tabela.insertRow(1)
     novaLinha.insertCell(0).innerText = nome
     novaLinha.insertCell(1).innerText = data
     novaLinha.insertCell(2).innerText = sexo

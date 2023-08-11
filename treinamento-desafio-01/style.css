@@ -30,7 +30,6 @@ body{
 header{
     background-color: var(--roxo);
     color: var(--branco);
-    padding: 2em;
     border-bottom: 2px solid var(--preto);
     height: 10vh;
     display: flex;
@@ -58,7 +57,7 @@ main{
 
 .cadastro {
     color: var(--branco);
-    height: 40vh;
+    height: 60vh;
     background-color: var(--cinza-claro);
     width: 100%;
 }
@@ -93,8 +92,8 @@ main{
 
 .botao-cadastrar{
     background-color: var(--roxo);
-    padding: 2rem;
-    font-size: 2em;
+    padding: 1em;
+    font-size: 32px;
     color: var(--branco);
     border-radius: 16px;
     border: 2px solid var(--preto);
@@ -110,8 +109,8 @@ main{
 .cadastros-realizados{
     background-color: var(--cinza-escuro);
     color: var(--branco);
-    margin: 2em;
-    width: 80%;
+    width: 100%;
+    margin: 2em 0;
 }
 
 .card-cadastros-realizados{
@@ -127,8 +126,12 @@ main{
 
 /* tabela */
 
+table{
+    width: 100%;
+}
+
 th{
-    padding: 24px;
+    padding: 1.5em;
     text-align: center;
     border: 1px solid var(--preto);
     background-color: var(--roxo);
@@ -139,7 +142,7 @@ tr{
 }
 
 td{
-    padding: 24px;
+    padding: 1.5em;
     text-align: center;
     border: 1px solid var(--preto);
     color: var(--preto);
@@ -172,12 +175,12 @@ tr:nth-child(odd) {
  .modal-conteudo {
     background-color: var(--roxo);
     border: 1px solid var(--preto);
-    padding: 24px;
+    padding: 1.5em;
     border-radius: 16px;
     display: flex;
     align-items: end;
     justify-content: space-between;
-    gap: 16px;
+    gap: 1em;
     color: var(--branco);
   }
 
@@ -186,14 +189,14 @@ tr:nth-child(odd) {
   .form-cadastro{
     display: flex;
     flex-direction: column;
-    gap: 16px;
+    gap: 1em;
   }
 
   .campo-cadastro{
     display: flex;
     justify-content: space-between;
     align-items: center;
-    gap: 16px;
+    gap: 1em;
   }
 
   .input-cadastro{
@@ -201,7 +204,7 @@ tr:nth-child(odd) {
     background-color: var(--branco);
     border-radius: 16px;
     font-size: 28px;
-    padding: 8px;
+    padding: .5em;
     outline: none;
   }
 
@@ -211,13 +214,13 @@ tr:nth-child(odd) {
 
   .campo-botoes{
     display: flex;
-    gap: 16px;
+    gap: 1em;
     justify-content: center;
   }
 
   .botao-cadastro-modal, .botao-fechar-modal{
     font-size: 24px;
-    padding: 16px;
+    padding: 1em;
     border-radius: 16px;
     background-color: var(--cinza-escuro);
     color: var(--branco);
