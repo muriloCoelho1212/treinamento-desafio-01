@@ -1,52 +1,44 @@
-const modal = document.querySelector('#modal-cadastro')
-const btnAbrirModal = document.querySelector('#botao-abrir-modal')
-const btnFecharModal = document.querySelector('#botao-fechar-modal')
-const tabela = document.querySelector("table")
-const form = document.querySelector('#form-cadastro')
+const modal = document.querySelector('[data-modal]')
+const btnModal = document.querySelectorAll('[data-btn-modal]')
+const table = document.querySelector("[data-table]")
+const form = document.querySelector('[data-form-cadastro]')
+const btnRegister = document.querySelector('[data-btn-cadastrar]')
 
-btnAbrirModal.addEventListener('click', () => {
-    modal.style.display = "block"
+btnModal.forEach( (element) => {
+    element.addEventListener('click', () => {
+        if(modal.style.display == "none"){
+            modal.style.display = "block"
+        } else {
+            modal.style.display = "none"
+        }
+    })
 })
 
-btnFecharModal.addEventListener('click', closeModal)
-
-function closeModal(evento){
+btnRegister.addEventListener('click', (evento) => {
     evento.preventDefault()
-
-    modal.style.display = "none"
-}
-
-const btnCadastrar = document.querySelector('#botao-modal-cadastrar')
-
-form.addEventListener('submit', (evento) => {
-    evento.preventDefault()
-
     criarCadastro()
 })
 
-function criarCadastro(){
-    let nome = document.querySelector('#nome-cadastro')
-    let data = new Date(document.querySelector('#data-cadastro').value)
-    let sexo = document.querySelector('input[name=sexo]:checked')
-    let endereco = document.querySelector('#endereco-cadastro')
-    let tel = document.querySelector('#tel-cadastro')
-    let email = document.querySelector('#email-cadastro')
-    
-    data = data.toLocaleDateString('pt-BR', {timeZone: 'UTC'})
 
-    criaLinha(nome.value, data, sexo.value, endereco.value, tel.value, email.value)
+function criarCadastro(){
+    const person = {
+        nome: document.querySelector('[data-nome]').value,
+        dataNascimento: document.querySelector('[data-nascimento]').value,
+        sexo: document.querySelector('input[data-sexo]:checked').value,
+        endereco: document.querySelector('[data-endereco]').value,
+        telefone: document.querySelector('[data-telefone]').value,
+        email: document.querySelector('[data-email]').value
+    }
+    person.dataNascimento = new Date(person.dataNascimento).toLocaleDateString('pt-BR', {timeZone: 'UTC'})
+
+    criaLinha(person)
     form.reset()
 }
 
-function criaLinha(nome, data, sexo, endereco, tel, email){
-    const novaLinha = tabela.insertRow(1)
-    novaLinha.insertCell(0).innerText = nome
-    novaLinha.insertCell(1).innerText = data
-    novaLinha.insertCell(2).innerText = sexo
-    novaLinha.insertCell(3).innerText = endereco
-    novaLinha.insertCell(4).innerText = tel
-    novaLinha.insertCell(5).innerText = email
-}
-
-function validarEmail(email){
+function criaLinha(person){
+    const novaLinha = table.insertRow()
+    let personValues = Object.values(person)
+    for(let i = 0; i < personValues.length; i++){
+        novaLinha.insertCell(i).innerText = personValues[i]
+    }
 }

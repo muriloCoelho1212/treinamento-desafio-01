@@ -1,6 +1,4 @@
 /* global */
-
-
 :root{
     --branco: #f2f0f0;
     --roxo: #161b66;
@@ -152,85 +150,85 @@ tr:nth-child(odd) {
     background-color: var(--cinza-claro);
   }
 
-/* modal de cadastro */
+  /* modal */
 
 .modal {
-    display: none;
-    position: fixed;
-    top: 0;
-    height: 100%;
-    width: 100%;
-    background-color: var(--preto-transparente);
-    font-size: 32px;
- }
+display: none;
+position: fixed;
+top: 0;
+height: 100%;
+width: 100%;
+background-color: var(--preto-transparente);
+font-size: 32px;
+}
 
- .alinha-modal-conteudo{
-    width: 100%;
-    height: 100%;
-    display: flex;
-    align-items: center;
-    justify-content: center;
- }
+.alinha-modal-conteudo{
+width: 100%;
+height: 100%;
+display: flex;
+align-items: center;
+justify-content: center;
+}
 
- .modal-conteudo {
-    background-color: var(--roxo);
-    border: 1px solid var(--preto);
-    padding: 1.5em;
-    border-radius: 16px;
-    display: flex;
-    align-items: end;
-    justify-content: space-between;
-    gap: 1em;
-    color: var(--branco);
-  }
+.modal-conteudo {
+background-color: var(--roxo);
+border: 1px solid var(--preto);
+padding: 1.5em;
+border-radius: 16px;
+display: flex;
+align-items: end;
+justify-content: space-between;
+gap: 1em;
+color: var(--branco);
+}
 
-  /* form de cadastro */
+/* form de cadastro */
 
-  .form-cadastro{
-    display: flex;
-    flex-direction: column;
-    gap: 1em;
-  }
+.form-cadastro{
+display: flex;
+flex-direction: column;
+gap: 1em;
+}
 
-  .campo-cadastro{
-    display: flex;
-    justify-content: space-between;
-    align-items: center;
-    gap: 1em;
-  }
+.campo-cadastro{
+display: flex;
+justify-content: space-between;
+align-items: center;
+gap: 1em;
+}
 
-  .input-cadastro{
-    border: 2px solid var(--cinza-escuro);
-    background-color: var(--branco);
-    border-radius: 16px;
-    font-size: 28px;
-    padding: .5em;
-    outline: none;
-  }
+.input-cadastro{
+border: 2px solid var(--cinza-escuro);
+background-color: var(--branco);
+border-radius: 16px;
+font-size: 28px;
+padding: .5em;
+outline: none;
+}
 
-  .input-cadastro:focus{
-    border: 2px solid var(--branco);
-  }
+.input-cadastro:focus{
+border: 2px solid var(--branco);
+}
 
-  .campo-botoes{
-    display: flex;
-    gap: 1em;
-    justify-content: center;
-  }
+.campo-botoes{
+display: flex;
+gap: 1em;
+justify-content: center;
+}
 
-  .botao-cadastro-modal, .botao-fechar-modal{
-    font-size: 24px;
-    padding: 1em;
-    border-radius: 16px;
-    background-color: var(--cinza-escuro);
-    color: var(--branco);
-    border: none;
-  }
+.botao-cadastro-modal, .botao-fechar-modal{
+font-size: 24px;
+padding: 1em;
+border-radius: 16px;
+background-color: var(--cinza-escuro);
+color: var(--branco);
+border: none;
+}
 
-  .botao-cadastro-modal:focus, .botao-fechar-modal:focus{
-    border: 2px solid var(--azul);
-    outline: 0;
-  }
+.botao-cadastro-modal:focus, .botao-fechar-modal:focus{
+border: 2px solid var(--azul);
+outline: 0;
+}
 
 .botao-cadastro-modal:hover, .botao-fechar-modal:hover{
     background-color: var(--cinza-claro);

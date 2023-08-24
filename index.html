@@ -23,14 +23,14 @@
                     <p class="descricao-sistema">
                         Preencha os dados para se cadastrar em nossa plataforma. O sistema permite a inserção de informações como nome completo, data de nascimento, endereço, contato (telefone e e-mail), gênero.
                     </p>
-                    <button class="botao-cadastrar" id="botao-abrir-modal">Cadastrar-se</button>
+                    <button class="botao-cadastrar" data-btn-modal>Cadastrar-se</button>
                 </div>
             </div>
         </section>
         <section class="cadastros-realizados">
             <div class="card-cadastros-realizados">
                 <h2 class="titulo-historico-cadastros">Cadastros realizados</h2>
-                <table>
+                <table data-table>
                     <tr>
                         <th>Nome</th>
                         <th>Data de Nascimento</th>
@@ -42,50 +42,50 @@
                 </table>
             </div>
         </section>
-        <div id="modal-cadastro" class="modal">
-            <div class="alinha-modal-conteudo">
-                <div class="modal-conteudo">
-                    <form class="form-cadastro" id="form-cadastro">
-                        <div class="campo-cadastro">
-                            <label for="">Nome:</label>
-                            <input type="text" class="input-cadastro" id="nome-cadastro" placeholder="Murilo" data-input required minlength="3" maxlength="100">
+    </main>
+    <div class="modal" data-modal>
+        <div class="alinha-modal-conteudo">
+            <div class="modal-conteudo">
+                <form class="form-cadastro" data-form-cadastro>
+                    <div class="campo-cadastro">
+                        <label for="">Nome:</label>
+                        <input type="text" class="input-cadastro" id="nome-cadastro" placeholder="Murilo" data-nome required minlength="3" maxlength="100">
+                    </div>
+                    <div class="campo-cadastro">
+                        <label for="">Data de Nascimento:</label>
+                        <input type="date" class="input-cadastro" id="data-cadastro" placeholder="dd/mm/aaaa" data-nascimento required>
+                    </div>
+                    <div class="campo-cadastro">
+                        <label for="">Sexo:</label>
+                        <input type="radio" class="input-cadastro" value="Masculino" id="sexo-cadastro-masc" name="sexo" required data-sexo>Masculino
+                        <input type="radio" class="input-cadastro" value="Feminino" id="sexo-cadastro-fem" name="sexo" data-sexo>Feminino
+                    </div> 
+                    <div class="campo-cadastro">
+                        <label for="">Endereço:</label>
+                        <input type="text" class="input-cadastro" id="endereco-cadastro" placeholder="Rua das Flores" data-endereco required maxlength="150">
+                    </div>
+                    <div class="campo-cadastro">
+                        <label for="">Telefone:</label>
+                        <input type="text" class="input-cadastro" id="tel-cadastro" placeholder="99 99999-8888" data-telefone required minlength="13" maxlength="15" pattern="\d{2}\s\d{5}-\d{4}" title="99 99999-9999">
+                    </div>
+                    <div class="campo-cadastro">
+                        <label for="">Email:</label>
+                        <input type="text" class="input-cadastro" id="email-cadastro" placeholder="aaaaa@gmail.com" data-email required minlength="4" maxlength="60" pattern="^\w*(.\\w*)?@\w*\.[a-z]+(\.[a-z]+)?$" title="Digite um email válido">
+                    </div>
+                    <div class="campo-botoes">
+                        <div class="campo-botao">
+                            <button class="botao-cadastro-modal" data-btn-cadastrar>Enviar</button>
                         </div>
-                        <div class="campo-cadastro">
-                            <label for="">Data de Nascimento:</label>
-                            <input type="date" class="input-cadastro" id="data-cadastro" placeholder="dd/mm/aaaa" data-input required>
+                        <div class="campo-botao">
+                            <button data-btn-modal class="botao-fechar-modal">
+                                Fechar
+                            </button>
                         </div>
-                        <div class="campo-cadastro">
-                            <label for="">Sexo:</label>
-                            <input type="radio" class="input-cadastro" value="Masculino" id="sexo-cadastro-masc" name="sexo" required data-input>Masculino
-                            <input type="radio" class="input-cadastro" value="Feminino" id="sexo-cadastro-fem" name="sexo" data-input>Feminino
-                        </div> 
-                        <div class="campo-cadastro">
-                            <label for="">Endereço:</label>
-                            <input type="text" class="input-cadastro" id="endereco-cadastro" placeholder="Rua das Flores" data-input required maxlength="150">
-                        </div>
-                        <div class="campo-cadastro">
-                            <label for="">Telefone:</label>
-                            <input type="text" class="input-cadastro" id="tel-cadastro" placeholder="99 99999-8888" data-input required minlength="13" maxlength="15" pattern="\d{2}\s\d{5}-\d{4}" title="99 99999-9999">
-                        </div>
-                        <div class="campo-cadastro">
-                            <label for="">Email:</label>
-                            <input type="text" class="input-cadastro" id="email-cadastro" placeholder="aaaaa@gmail.com" data-input required minlength="4" maxlength="60" pattern="^\w*(.\\w*)?@\w*\.[a-z]+(\.[a-z]+)?$" title="Digite um email válido">
-                        </div>
-                        <div class="campo-botoes">
-                            <div class="campo-botao">
-                                <button class="botao-cadastro-modal" id="botao-modal-cadastrar">Enviar</button>
-                            </div>
-                            <div class="campo-botao">
-                                <button id="botao-fechar-modal" class="botao-fechar-modal">
-                                    Fechar
-                                </button>
-                            </div>
-                        </div>
-                    </form>
-                </div>
+                    </div>
+                </form>
             </div>
         </div>
-    </main>
+    </div>
     <footer>
         <a href="https://github.com/muriloCoelho1212" class="footer-ancora">Feito por Murilo Coelho</a>
     </footer>
