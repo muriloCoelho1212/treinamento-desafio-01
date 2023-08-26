@@ -2,20 +2,19 @@ const modal = document.querySelector('[data-modal]')
 const btnModal = document.querySelectorAll('[data-btn-modal]')
 const table = document.querySelector("[data-table]")
 const form = document.querySelector('[data-form-cadastro]')
-const btnRegister = document.querySelector('[data-btn-cadastrar]')
 
 btnModal.forEach( (element) => {
     element.addEventListener('click', () => {
-        if(modal.style.display == "none"){
-            modal.style.display = "block"
-        } else {
+        if(modal.style.display == "block"){
             modal.style.display = "none"
+        } else {
+            modal.style.display = "block"
         }
     })
 })
 
-btnRegister.addEventListener('click', (evento) => {
-    evento.preventDefault()
+form.addEventListener('submit', (e) => {
+    e.preventDefault()
     criarCadastro()
 })
 

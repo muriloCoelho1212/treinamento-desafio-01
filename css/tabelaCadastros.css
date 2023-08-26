@@ -1,0 +1,25 @@
+table{
+  width: 100%;
+}
+
+th{
+  padding: 1.5em;
+  text-align: center;
+  border: 1px solid var(--preto);
+  background-color: var(--roxo);
+}
+
+tr{
+  background-color: var(--branco);
+}
+
+td{
+  padding: 1.5em;
+  text-align: center;
+  border: 1px solid var(--preto);
+  color: var(--preto);
+}
+
+tr:nth-child(odd) {
+  background-color: var(--cinza-claro);
+}

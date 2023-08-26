@@ -1,0 +1,48 @@
+.cadastro {
+  color: var(--branco);
+  height: 60vh;
+  background-color: var(--cinza-claro);
+  width: 100%;
+}
+
+.card-cadastro{
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  flex-direction: column;
+  padding: 1.5em;
+  height: 100%;
+  border-bottom: 2px solid;
+  border-image: linear-gradient(#1a3689, #1344a0 ) 1;
+}
+
+.card-descricao-sistema{
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 1.5em;
+}
+
+.titulo-sistema{
+  font-size: 4em;
+}
+
+.descricao-sistema{
+  text-align: center;
+  font-size: 2em;
+  line-height: 1.5;
+}
+
+.botao-cadastrar{
+  background-color: var(--roxo);
+  padding: 1em;
+  font-size: 32px;
+  color: var(--branco);
+  border-radius: 16px;
+  border: 2px solid var(--preto);
+}
+
+.botao-cadastrar:hover{
+  background-color: var(--azul);
+  transition: .5s;
+}

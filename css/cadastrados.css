@@ -1,0 +1,17 @@
+.cadastros-realizados{
+  background-color: var(--cinza-escuro);
+  color: var(--branco);
+  width: 100%;
+  margin: 2em 0;
+}
+
+.card-cadastros-realizados{
+  text-align: center;
+  display: flex;
+  flex-direction: column;
+  gap: 2em;
+}
+
+.titulo-historico-cadastros{
+  font-size: 4em;
+}

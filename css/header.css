@@ -1,0 +1,14 @@
+header{
+  background-color: var(--roxo);
+  color: var(--branco);
+  border-bottom: 2px solid var(--preto);
+  height: 10vh;
+  display: flex;
+  justify-content: center;
+}
+
+.titulo {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
